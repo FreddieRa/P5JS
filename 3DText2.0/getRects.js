@@ -3,6 +3,7 @@ function getRects(array, bevel) {
 	var inner = Array(mat.length).fill(0).map(x => Array(mat.length).fill(0));
 	var rects = []
 	
+	if (bevel) {
 		for (var x = 0; x < mat.length; x++) {
 			for (var y = 0; y < mat.length; y++) {
 				var notEdge = (x > 0 && y > 0 && x <  (mat.length - 1) && y <  (mat.length - 1));
